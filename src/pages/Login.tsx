@@ -1,4 +1,4 @@
-import { Button, Col, Row } from "antd";
+import { Button, Card, Col, Row } from "antd";
 import { FieldValues } from "react-hook-form";
 
 import { useLoginMutation } from "../redux/features/auth/authAPI";
@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import PHForm from "../components/Form/PHForm";
 import PHInput from "../components/Form/PHInput";
+
 
 const Login = () => {
 	const navigate = useNavigate();
@@ -55,17 +56,36 @@ const Login = () => {
 			style={{ height: "100vh", width: "100%" }}
 		>
 			<Col xs={20} md={12} lg={10} xl={6}>
-				<PHForm onSubmit={onSubmit} defaultValues={defaultValues}>
-					<PHInput type="text" name="userId" label="User ID: " />
-					<PHInput type="text" name="password" label="Password: " />
-					<Button
-						type="primary"
-						style={{ width: "100%" }}
-						htmlType="submit"
-					>
-						Login
-					</Button>
-				</PHForm>
+				<Card style={{ padding: "10px", width: "100%" }}>
+					<PHForm onSubmit={onSubmit} defaultValues={defaultValues}>
+						<PHInput type="text" name="userId" label="User ID: " />
+						<PHInput
+							type="text"
+							name="password"
+							label="Password: "
+						/>
+						<Button
+							type="primary"
+							style={{ width: "100%" }}
+							htmlType="submit"
+						>
+							Login
+						</Button>
+						<span style={{ fontSize: "14px" }}>
+							Didn't Register yet!! Please{" "}
+							<span
+								style={{
+									color: "blue",
+									fontSize: "12px",
+									cursor: "pointer",
+								}}
+								onClick={() => navigate("/signup")}
+							>
+								Register
+							</span>
+						</span>
+					</PHForm>
+				</Card>
 			</Col>
 		</Row>
 	);

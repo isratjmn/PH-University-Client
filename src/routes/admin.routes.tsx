@@ -90,7 +90,6 @@ export const adminPaths = [
 				name: "Admins",
 				path: "admin-data",
 				element: <AdminData />,
-
 			},
 			{
 				name: "Create Faculty",

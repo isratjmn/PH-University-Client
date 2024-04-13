@@ -10,7 +10,7 @@ type TPHSelectProps = {
 	disabled?: boolean;
 	size: "small" | "middle" | "large";
 	mode?: "multiple" | "tags" | undefined;
-	onValueChange: React.Dispatch<React.SetStateAction<string | undefined>>;
+	onValueChange: React.Dispatch<React.SetStateAction<string>>;
 };
 const PHSelectWithWatch = ({
 	label,

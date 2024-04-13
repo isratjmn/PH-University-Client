@@ -17,8 +17,6 @@ const SemesterRegistration = () => {
 	const { data: academicSemester } = useGetAllSemesterQuery([
 		{ name: "sort", value: "year" },
 	]);
-	console.log(academicSemester);
-
 	const academicSemesterOptions = academicSemester?.data?.map(
 		(item: { _id: any; name: any; year: any }) => ({
 			value: item._id,
@@ -69,7 +67,7 @@ const SemesterRegistration = () => {
 				Create Semester Registration
 			</Title>
 			<Flex justify="center">
-				<Col xs={24} sm={20} md={16} lg={12} xl={8}>
+				<Col xs={24} sm={20} md={18} lg={14} xl={8}>
 					<Card style={{ padding: "10px" }}>
 						<PHForm onSubmit={onSubmit} defaultValues={{}}>
 							<PHSelect

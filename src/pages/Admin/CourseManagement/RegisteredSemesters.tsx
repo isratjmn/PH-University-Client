@@ -98,7 +98,6 @@ const RegisteredSemester = () => {
 			title: "Action",
 			key: "x",
 			render: (item) => {
-				console.log(item);
 				return (
 					<Dropdown menu={menuProps} trigger={["click"]}>
 						<Button onClick={() => setSemesterId(item.key)}>

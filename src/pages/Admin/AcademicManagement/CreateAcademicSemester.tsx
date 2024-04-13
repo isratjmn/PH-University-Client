@@ -79,7 +79,7 @@ const CreateAcademicSemester = () => {
 				Create Academic Semester
 			</Title>
 			<Flex justify="center">
-				<Col xs={24} sm={20} md={16} lg={12} xl={8}>
+				<Col xs={24} sm={20} md={18} lg={14} xl={8}>
 					<Card style={{ padding: "10px" }}>
 						<PHForm
 							onSubmit={onSubmit}

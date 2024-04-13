@@ -38,7 +38,7 @@ const CreateAcademicFaculty = () => {
 	};
 	return (
 		<Row justify="center">
-			<Col xs={24} sm={16} lg={10} xl={8}>
+			<Col xs={24} sm={20} md={18} lg={14} xl={8}>
 				<div style={{ textAlign: "center" }}>
 					<Title
 						level={2}

@@ -41,7 +41,7 @@ const ChangePassword = () => {
 						/>
 						<PHInput
 							type="text"
-							name="NewPassword"
+							name="newPassword"
 							label="New Password: "
 						/>
 						<Button type="primary" htmlType="submit">

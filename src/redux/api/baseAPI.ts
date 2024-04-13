@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import {
 	BaseQueryApi,
@@ -27,12 +28,12 @@ const baseQueryWithRefreshToken: BaseQueryFn<
 	BaseQueryApi,
 	DefinitionType
 > = async (args, api, extraOptions): Promise<any> => {
-	let result = await baseQuery(args, api, extraOptions);
+	let result: any = await baseQuery(args, api, extraOptions);
 	if (result?.error?.status === 404) {
-		toast.error(result?.error?.data?.message || "Not Found");
+		toast.error(result.error?.data.message);
 	}
 	if (result?.error?.status === 400) {
-		toast.error(result?.error?.data?.message || "Not Found");
+		toast.error(result?.error?.data?.message);
 	}
 
 	if (result?.error?.status === 401) {

@@ -1,3 +1,4 @@
+import { TMeta } from ".";
 import {
 	TAcademicDepartment,
 	TAcademicFaculty,
@@ -25,6 +26,7 @@ export interface TStudent {
 	academicDepartment: TAcademicDepartment;
 	academicFaculty: TAcademicFaculty;
 	fullName: string;
+	meta?: TMeta;
 }
 
 export type TUser = {

@@ -102,6 +102,7 @@ const AddFacultyModal = ({ facultyInfo }: any) => {
 				onCancel={handleCancel}
 				footer={null}
 			>
+				
 				<Card style={{ padding: "10px" }}>
 					<PHForm onSubmit={handleSubmit}>
 						<PHSelect

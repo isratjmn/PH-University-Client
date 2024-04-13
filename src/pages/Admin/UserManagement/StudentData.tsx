@@ -30,6 +30,7 @@ const StudentData = () => {
 		{ name: "sort", value: "id" },
 		...params,
 	]);
+	console.log(studentData);
 
 	const handleBlockeduser = async (userId: string) => {
 		Swal.fire({
@@ -80,8 +81,8 @@ const StudentData = () => {
 		});
 	};
 
-	const metaData = studentData?.data?.meta;
-	const tableData = studentData?.data?.result?.map(
+	const metaData = studentData?.meta;
+	const tableData = studentData?.data?.map(
 		({ _id, fullName, id, email, contactNo }: any) => ({
 			key: _id,
 			fullName,
@@ -115,6 +116,7 @@ const StudentData = () => {
 			title: "Action",
 			key: "x",
 			render: (item) => {
+				console.log(item.key);
 				return (
 					<Space>
 						{item.status === "blocked" ? (
@@ -158,9 +160,7 @@ const StudentData = () => {
 						</Link>
 						{item.status === "blocked" ? (
 							<Button
-								onClick={() =>
-									handleUnblockedUser(item?.userId)
-								}
+								onClick={() => handleUnblockedUser(item?.key)}
 								style={{
 									borderColor: "#1890ff",
 									fontSize: "12px",
@@ -170,7 +170,7 @@ const StudentData = () => {
 							</Button>
 						) : (
 							<Button
-								onClick={() => handleBlockeduser(item?.userId)}
+								onClick={() => handleBlockeduser(item?.key)}
 								style={{
 									borderColor: "#1890ff",
 									fontSize: "12px",

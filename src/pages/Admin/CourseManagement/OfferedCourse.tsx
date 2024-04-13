@@ -106,7 +106,8 @@ const OfferedCourse = () => {
 				Offered Course
 			</Title>
 			<Flex justify="center" align="center">
-				<Col span={24} md={{span: 20}} lg={{ span: 12 }}>
+				<Col span={24} xs={24} sm={20} md={18} lg={18} xl={10}>
+				
 					<Card style={{ padding: "10px" }}>
 						<PHForm
 							onSubmit={onSubmit}
@@ -145,6 +146,7 @@ const OfferedCourse = () => {
 										options={courseOptions}
 										name="course"
 										label="Course"
+										size={"small"}
 									/>
 								</Col>
 							</Row>
